@@ -18,10 +18,4 @@ p {
 }
 
   
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    p {
-        font-size: 5vw; /* Larger text on smaller screens */
-        max-width: 90%;
-    }
-}
+
