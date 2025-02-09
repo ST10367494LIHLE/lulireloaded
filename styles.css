@@ -2,12 +2,17 @@ body {
     margin: 0;
     padding: 0;
     background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 p {
-    font-size: 8px;
-    line-height: 8px;
+    font-size: 3vw; /* Adjusts with screen size */
+    line-height: 1.4;
     text-align: justify;
+    max-width: 80%;
     
     background: url("images/WhatsApp Image 2025-01-26 at 09.27.12.jpeg") no-repeat center/cover;
     background-attachment: fixed;
@@ -17,4 +22,10 @@ p {
     -webkit-text-fill-color: rgba(225, 225, 255, 0); /* Fully transparent text */
 }
 
-  
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    p {
+        font-size: 5vw; /* Larger text on smaller screens */
+        max-width: 90%;
+    }
+}
