@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #000;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .message {
+            font-size: 24px;
+            opacity: 0;
+            animation: fadeIn 3s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .button-container {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: darkred;
+        }
+
+        .password-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .password-input {
+            padding: 10px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .password-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .password-button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="password-container" id="password-container">
+        <input type="password" id="password-input" class="password-input" placeholder="Enter Password">
+        <button class="password-button" onclick="checkPassword()">Submit</button>
+    </div>
+
+    <div class="message" id="message">This is not a love letter, but yk...</div>
+
+    <div class="button-container" id="button-container">
+        <button class="button" onclick="openLyricsPage()">I Love You ❤️</button>
+    </div>
+
+    <script>
+        const correctPassword = "LULI25/05/24"; // Replace with your desired password
+
+        function checkPassword() {
+            const password = document.getElementById("password-input").value;
+
+            if (password === correctPassword) {
+                document.getElementById("password-container").style.display = "none";
+                document.getElementById("message").style.opacity = 1; // Show the message
+                setTimeout(() => {
+                    document.getElementById("button-container").style.display = "block";
+                }, 3000); // Show button after 3 seconds
+            } else {
+                alert("Incorrect password! Please try again.");
+            }
+        }
+
+        function openLyricsPage() {
+            window.location.href = "indeex.html"; // Corrected typo here
+        }
+    </script>
+
+</body>
+</html>
